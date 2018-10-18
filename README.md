@@ -6,7 +6,9 @@ FIXME
 
 ### Run the application locally
 
-`lein ring server`
+`lein ring server-headless`
+
+`curl http://localhost:3000/differentiate/4/3/2/1`
 
 ### Run the tests
 
