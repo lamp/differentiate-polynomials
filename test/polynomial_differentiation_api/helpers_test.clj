@@ -2,12 +2,10 @@
   (:require [clojure.test :refer [deftest testing is]]
             [polynomial-differentiation-api.helpers :as subject]))
 
-
 (deftest parse-input-test
   (testing "parses well formed input"
     (is (= [1 2 3]
            (subject/parse-input "1/2/3")))))
-
 
 (deftest render-test
   (testing "renders default case"

@@ -1,6 +1,8 @@
 (ns polynomial-differentiation-api.helpers
   (:require [clojure.string :refer [split]]))
 
+;; Ideally this would be done by compojure api but learning how to coerce arbitrary inputs
+;; using this library was outside the scope of this exercise
 (defn parse-input [inputs]
   (->> (split inputs #"/")
        (map #(Integer. %))))

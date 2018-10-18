@@ -4,13 +4,9 @@
             [polynomial-differentiation-api.handler :refer :all]
             [ring.mock.request :as mock]))
 
-(defn parse-body [body]
-  (cheshire/parse-string (slurp body) true))
-
 (deftest a-test
 
-  (testing "Test GET request to /api/differentiate/1/1 returns expected response"
-    (let [response (app (-> (mock/request :get  "/api/differentiate/1/1")))
-          body     (parse-body (:body response))]
+  (testing "Test GET request to /differentiate/4/3/2/1 returns expected response"
+    (let [response (app (-> (mock/request :get  "/differentiate/4/3/2/1")))]
       (is (= (:status response) 200))
-      (is (= (:result body) 3)))))
+      (is (= (:body response) "12x^2+6x+2")))))

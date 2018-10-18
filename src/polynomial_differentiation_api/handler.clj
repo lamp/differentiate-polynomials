@@ -20,5 +20,5 @@
          :summary "Differentiate a polynomial"
          (ok  (-> inputs
                   helpers/parse-input
-                  calculator/derive-polynomial-pairs
+                  calculator/differentiate
                   helpers/render)))))
